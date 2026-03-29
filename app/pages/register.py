@@ -1,5 +1,5 @@
 import cv2
-import pandas as pd # Great for managing the user list
+import numpy as np # Great for managing the user list
 
 def register_user(name):
     # 1. Assign a unique ID
