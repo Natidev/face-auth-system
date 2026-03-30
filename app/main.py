@@ -22,7 +22,7 @@ def main():
         st.page_link("pages/login.py", label="Login")
     
     with col2:
-        st.page_link("app/pages/register.py", label="Register", icon="Register")
+        st.page_link("pages/register.py", label="Register")
 
 
 if __name__ == "__main__":
