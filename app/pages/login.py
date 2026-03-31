@@ -69,7 +69,7 @@ with col2:
 st.divider()
 
 if camera_image is not None:
-    if st.button("Authenticate Face", type="primary", use_container_width=True):
+    if st.button("Authenticate Face", type="primary", width="stretch"):
         with st.spinner("Analyzing facial features..."):
             # Simulate processing delay
             import time
@@ -88,14 +88,14 @@ if camera_image is not None:
             </div>
         """, unsafe_allow_html=True)
 
-        if st.button("Continue to Dashboard"):
+        if st.button("Continue to Dashboard", width="stretch"):
             st.switch_page("pages/dashboard.py")
 
     elif st.session_state.login_status == "failed":
         st.error("Face not recognized. Please try again or register a new face.")
 
 else:
-    st.button("Authenticate Face", type="primary", disabled=True, use_container_width=True)
+    st.button("Authenticate Face", type="primary", disabled=True, width="stretch")
 
 # Additional options
 st.divider()
@@ -103,8 +103,7 @@ st.divider()
 col_a, col_b = st.columns(2)
 
 with col_a:
-    if st.button("Register New Face", use_container_width=True):
-        st.info("Registration flow would open here in a full application.")
-
+    if st.button("Register New Face", width="stretch"):
+        st.switch_page("pages/register.py")
         
 st.caption("Face Login Demo ")
